@@ -1,2 +1,1 @@
 argcomplete==2.0.0
-functions==0.7.0
