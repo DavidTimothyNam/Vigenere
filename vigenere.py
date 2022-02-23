@@ -2,9 +2,7 @@
 
 import argparse
 import argcomplete
-
 import functions
-
 
 parser = argparse.ArgumentParser(description="Encrypt or decrypt a vigenere cipher, or try to solve one without a key!")
 
@@ -30,7 +28,6 @@ solve_with_length.add_argument("-m", "--max_length", type=int, help="Solve with 
 solve.add_argument("-b", "--bigram", required=False, action="store_true", help="Potentially improves the key, but takes longer to complete.")
 # solve.add_argument("-d", "--decrypt", required=False, action="store_true", help="Decrypt after finding the key. Not recommended on large ciphertexts and when [num_lengths] > 1.")
 
-
 argcomplete.autocomplete(parser)
 args = parser.parse_args()
 
@@ -39,7 +36,6 @@ if args.text:
     text = args.text
 elif args.file:
     text = args.file.read()
-
 
 if args.mode == "encrypt":
     encryption_key = args.key
